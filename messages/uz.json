@@ -2,12 +2,12 @@
   "HomePage": {
     "card-title":"Eng yaxshi sog‘liqni saqlash amaliyotlari!",
     "card-description":"Sog‘lig‘ingizni yaxshilash uchun turli xizmatlarni taklif qilamiz.",
-    "dental": "Og‘iz bo‘shlig‘i salomatligini yaxshilash uchun tishlarni olib tashlash, implantatsiya va boshqa jarrohlik amaliyotlarini o‘z ichiga olgan professional davolash usuli.",
-  "dental-title": "Stomatologik jarrohlik",
-  "cardiology": "Yurak va qon tomir kasalliklarini aniqlash, davolash hamda yurak salomatligini saqlashga qaratilgan tibbiy yo‘nalish.",
-  "cardiology-title": "Kardiologiya",
-  "dermatology": "Teri, soch va tirnoq kasalliklarini davolash hamda ularning holatini yaxshilash bilan shug‘ullanuvchi tibbiy yo‘nalish.",
-  "dermatology-title": "Dermatologiya"
+    "dental": "Ayollarning reproduktiv tizimiga oid kasalliklarni aniqlash, davolash va oldini olish bilan shug'ullanuvchi tibbiyot sohasi. Bu soha hayz ko'rish, homiladorlik, menopauza va boshqa holatlar bilan bog'liq kasalliklarni o'z ichiga oladi.",
+  "dental-title": "Ginekologiya",
+  "cardiology": "Endokrin tizimni o'rganish va shu tizim bilan bog'liq kasalliklarni davolashga qaratilgan tibbiyot sohasi. Bu soha gormonal buzilishlar, diabet, qalqonsimon bez kasalliklari va moddalar almashinuvini o'z ichiga oladi.",
+  "cardiology-title": "Endokrinologiya",
+  "dermatology": "Bolalar kasalliklarini aniqlash, davolash va oldini olish bilan shug'ullanuvchi tibbiyot sohasi. Bu soha bolalar rivoji, o'sishi, emlash va umumiy salomatlikni qo'llab-quvvatlashga qaratilgan.",
+  "dermatology-title": "Pediatriya"
   },
   "Header": {
     "home": "Bosh sahifa",

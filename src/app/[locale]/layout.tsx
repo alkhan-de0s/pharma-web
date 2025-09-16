@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Nunito_Sans } from "next/font/google";
+import { Archivo, Nunito_Sans,Poppins } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -15,6 +15,11 @@ const archivo = Archivo({
 });
 
 const nunitoSans = Nunito_Sans({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+const poppinps = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -43,7 +48,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${archivo.className} ${nunitoSans.className}`}
+        className={`${poppinps.className}`}
         suppressHydrationWarning
       >
         <ReactQueryProvider>

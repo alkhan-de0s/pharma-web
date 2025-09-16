@@ -2,7 +2,7 @@
 @use "variables";
 
 html,body {
-  font-family: "Archivo", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,361 +31,83 @@ button {
 }
 
 
+.home-slider {
+  .swiper-slide {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.home-slider-global {
-  min-height: 100vh;
-  height: 100vh;
-  width: 100%;
-
-  video {
-    width: 100%;
-    height: 100% !important;
-    object-fit: cover;
+    &::before {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #204066;
+      -webkit-transition: all ease-in-out 0.3s;
+      transition: all ease-in-out 0.3s;
+      opacity: 0.8;
+    }
+  }
+  .swiper-slide-active{
+    img{
+      animation: kbrns_zoomOutIn 35s linear 0s infinite alternate;
+    }
   }
 
-  .swiper-wrapper {
-    &::after {
-      content: "";
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    svg {
+      --progress: 0;
       position: absolute;
       left: 0;
       top: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(14, 0, 1, 0.3) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      z-index: 10;
       width: 100%;
       height: 100%;
-      z-index: 1;
-    }
-  }
-}
-
-.custom-pagination {
-  position: absolute;
-  top: 50%;
-  margin: 0 auto;
-  width: 100%;
-  max-width: variables.$breakpoint-desktop;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  padding-inline: utils.rem(60px);
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: utils.rem(90px);
-    top: 0;
-    width: utils.rem(2px);
-    height: utils.rem(320px);
-    background-color: variables.$main-white;
-    opacity: 0.4;
-    z-index: 1;
-  }
-
-  @media (max-width: variables.$breakpoint-tablet) {
-    left: 0;
-    bottom: 30%;
-    padding-left: utils.rem(60px);
-    padding-right: 0;
-    &::before {
-      left: utils.rem(40px);
-    }
-    &::after {
-      height: 100%;
-    }
-  }
-}
-
-.custom-bullet {
-  position: relative;
-  width: utils.rem(350px);
-  height: utils.rem(40px);
-  margin-bottom: utils.rem(20px);
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: utils.rem(27px);
-    top: utils.rem(18px);
-    width: utils.rem(8px);
-    height: utils.rem(8px);
-    border-radius: 50%;
-    background-color: variables.$main-white;
-    border: utils.rem(1px) solid variables.$main-white;
-    opacity: 0.6;
-    z-index: 3;
-    transition: all 0.3s ease;
-  }
-
-  .bullet-number {
-    position: absolute;
-    left: utils.rem(-20px);
-    top: utils.rem(18px);
-    color: variables.$main-white;
-    opacity: 0.6;
-    font-size: utils.rem(16px);
-    font-weight: 400;
-    width: utils.rem(40px);
-    text-align: right;
-    line-height: 1;
-  }
-
-  .bullet-title {
-    position: absolute;
-    left: utils.rem(50px);
-    top: utils.rem(18px);
-    color: variables.$main-white;
-    font-size: utils.rem(18px);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: utils.rem(1px);
-    white-space: nowrap;
-    line-height: 1;
-  }
-
-  .bullet-info {
-    display: none;
-    margin-left: utils.rem(50px);
-    margin-top: utils.rem(50px);
-    color: variables.$main-white;
-    opacity: 0.8;
-    font-size: utils.rem(18px);
-    font-weight: 500;
-    width: utils.rem(487px);
-    text-align: start;
-  }
-
-  .bullet-button {
-    display: none;
-    margin-left: utils.rem(50px);
-    margin-top: utils.rem(15px);
-    background-color: variables.$main-red;
-    color: variables.$main-white;
-    border: none;
-    padding: utils.rem(12px) utils.rem(30px);
-    font-size: utils.rem(16px);
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-
-    &:hover {
-      svg {
-        transform: rotate(45deg);
-        transition: all 0.3s ease;
-      }
+      stroke-width: 4px;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
     }
   }
 
-  @media (max-width: variables.$breakpoint-tablet) {
-    width: utils.rem(255px);
-    height: utils.rem(35px);
-    margin-bottom: utils.rem(60px);
-
-    &::after {
-      left: utils.rem(-23px);
-      width: utils.rem(6px);
-      height: utils.rem(6px);
-      top: utils.rem(15px);
-    }
-
-    .bullet-number {
-      width: utils.rem(35px);
-      font-size: utils.rem(14px);
-      top: utils.rem(15px);
-      left: utils.rem(-65px);
-    }
-
-    .bullet-title {
-      left: 0;
-      font-size: utils.rem(14px);
-      top: utils.rem(15px);
-      display: inline-block;
-      max-width: utils.rem(237px);
-      white-space: normal;
-      text-align: left;
-    }
-
-    .bullet-info {
-      font-size: utils.rem(14px);
-      max-width: utils.rem(220px);
-      margin-top: utils.rem(60px);
-      margin-left: 0;
-    }
-
-    .bullet-button {
-      margin-left: 0;
-      padding: utils.rem(10px) utils.rem(20px);
-      font-size: utils.rem(14px);
-      margin-top: utils.rem(12px);
-
-      &:hover {
-        transform: translateX(utils.rem(5px));
-      }
-    }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #039803 !important;
   }
-}
-
-.custom-bullet.active {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: utils.rem(30px);
-    top: 0;
-    width: utils.rem(2px);
-    height: 100%;
-    background-color: variables.$main-white;
-    animation: fillProgress 10s linear forwards;
-    opacity: 1;
-    z-index: 4;
-  }
-
-  &::after {
-    width: utils.rem(12px);
-    height: utils.rem(12px);
-    left: utils.rem(24px);
-    top: utils.rem(12px);
-    background-color: variables.$main-white;
-    border: utils.rem(1px) solid variables.$main-white;
-    box-shadow: 0 0 utils.rem(10px) rgba(255, 255, 255, 0.5);
-    animation: pulseActive 2s ease-in-out infinite;
-  }
-
-  .bullet-number {
-    color: variables.$main-white;
-    font-weight: 600;
-    top: utils.rem(12px);
-  }
-
-  .bullet-title {
-    color: variables.$main-white;
-    font-weight: 900;
-    font-size: utils.rem(30px);
-    top: utils.rem(4px);
-  }
-
-  .bullet-info {
-    display: block;
-  }
-
-  .bullet-button {
-    @include utils.display-flex-center();
-    gap: utils.rem(6px);
-    width: fit-content;
-    svg {
-      transition: all 0.3s ease;
-      path {
-        stroke: variables.$main-white;
-      }
-    }
-  }
-
-  @media (max-width: variables.$breakpoint-tablet) {
-    min-height: utils.rem(200px);
-    margin-bottom: utils.rem(40px);
-
-    &::before {
-      left: utils.rem(-20px);
-    }
-
-    &::after {
-      width: utils.rem(10px);
-      height: utils.rem(10px);
-      left: utils.rem(-25px);
-      top: utils.rem(10px);
-    }
-    .bullet-info {
-      max-height: utils.rem(100px);
-      overflow: hidden;
-    }
-    .bullet-number {
-      top: utils.rem(10px);
-    }
-
-    .bullet-title {
-      font-size: utils.rem(18px);
-      top: utils.rem(10px);
-    }
-  }
-}
-
-.home-slider-trusted {
-  overflow: hidden;
-  .swiper-slide {
-    height: utils.fluid-size(566, 377);
-    padding-top: utils.rem(60px);
-  }
-  .swiper-pagination-bullet {
-    background: variables.$main-white;
-    opacity: 0.6;
-  }
-
   .swiper-pagination-bullet-active {
-    background: variables.$main-white;
-    opacity: 1;
-  }
-
-  .swiper-pagination {
-    left: unset !important;
-  }
-
-  @media (max-width: variables.$breakpoint-tablet) {
-    overflow: visible;
-    .swiper-slide {
-      padding-top: 0;
-      margin-top: -40px;
-    }
-    .swiper-pagination {
-      left: unset !important;
-      bottom: -2.75rem !important;
-    }
+    background-color: #039803 !important;
   }
 }
 
-.faq-swiper .faq-slide-offset .faq-card-global {
-  margin-top: utils.rem(40px);
+@keyframes kbrns_zoomOutIn {
+  0% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-.thumbnail-gallery-second {
-  height: 80%;
-  width: 100%;
-}
-
-.thumbnail-gallery {
-  height: 500px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.thumbnail-gallery-second .swiper-slide {
-  width: utils.rem(150px) !important;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.thumbnail-gallery-second .swiper-slide-thumb-active {
-  opacity: 1;
-}
-.thumbnail-gallery-second {
-  height: 150px;
-  box-sizing: border-box;
-  padding: 10px 0;
-  width: 100%;
-}
-.thumbnail-gallery-second .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .sr-only {
   position: absolute;
@@ -399,66 +121,3 @@ button {
   border: 0;
 }
 
-@keyframes fillProgress {
-  0% {
-    height: 0%;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  100% {
-    height: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes pulseActive {
-  0% {
-    box-shadow: 0 0 utils.rem(10px) rgba(255, 255, 255, 0.5);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 utils.rem(15px) rgba(255, 255, 255, 0.8);
-    transform: scale(1.1);
-  }
-  100% {
-    box-shadow: 0 0 utils.rem(10px) rgba(255, 255, 255, 0.5);
-    transform: scale(1);
-  }
-}
-.whiteBg {
-  position: fixed;
-  background: white;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11;
-}
-
-.error-global {
-  @include utils.display-flex-center;
-  flex-direction: column;
-  gap: utils.rem(60px);
-  margin-top: utils.rem(40px);
-  button {
-    background: variables.$main-white;
-    padding: utils.rem(15px) utils.rem(24px);
-    border: utils.rem(1px) solid;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: utils.rem(16px);
-    line-height: 100%;
-    color: rgba(37, 37, 39, 1);
-    display: flex;
-    margin: 0 auto;
-  }
-}
-.ampersand {
-  font-family: Nunito Sans;
-}
-.carousel-slider .swiper-button-prev:after,
-.carousel-slider .swiper-button-next::after{
-  font-size: utils.rem(22px);
-}

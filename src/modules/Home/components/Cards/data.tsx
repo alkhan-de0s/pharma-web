@@ -1,4 +1,4 @@
-import { HeartPlus, MarsStroke, Syringe } from "lucide-react";
+import { Stethoscope , MarsStroke, Baby  } from "lucide-react";
 import { ReactNode } from "react";
 
 type Service = {
@@ -10,20 +10,20 @@ type Service = {
 export const services: Service[] = [
   {
     id:1,
-    icon: <Syringe size={48} color="#12b48b" />,
+    icon: <MarsStroke size={48} color="#12b48b" />,
     title: "dental-title",
     description: "dental"
   },
   {
     id:2,
-    icon: <HeartPlus size={48} color="#12b48b" />,
+    icon: <Stethoscope size={48} color="#12b48b" />,
     title: "cardiology-title",
     description:
       "cardiology",
   },
   {
     id:3,
-    icon: <MarsStroke size={48} color="#12b48b" />,
+    icon: <Baby size={48} color="#12b48b" />,
     title: "dermatology-title",
     description:
       "dermatology",

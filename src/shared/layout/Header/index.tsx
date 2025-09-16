@@ -120,6 +120,7 @@ const Header = () => {
             name="burger_button"
               className={`${styles.BurgerButton} ${styles[headerStyle]}`}
               onClick={toggleBurger}
+              aria-label="Menu_open"
             >
               <span></span>
               <span></span>

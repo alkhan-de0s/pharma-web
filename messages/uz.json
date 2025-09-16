@@ -108,5 +108,9 @@
   "Error": {
     "title": "Nə isə səhv oldu!",
     "tryAgain": "Yenidən cəhd et"
+  },
+   "Seo":{
+    "medicine":"dori",
+    "description" : "Renessanspharma sifatli dori-darmonlarni eng qisqa vaqt ichida sizning xizmatingizga yetkazib beramiz."
   }
 }

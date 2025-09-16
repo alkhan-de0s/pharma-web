@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Nunito_Sans,Poppins } from "next/font/google";
+import {Poppins } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -8,17 +8,7 @@ import { Providers as ReactQueryProvider } from "@/providers/reactQuery-provider
 import { Header } from "@/shared/layout";
 import "@/shared/scss/index.scss";
 
-const archivo = Archivo({
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
 
-const nunitoSans = Nunito_Sans({
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
 const poppinps = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],

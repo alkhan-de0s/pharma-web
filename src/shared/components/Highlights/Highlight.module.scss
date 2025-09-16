@@ -1,0 +1,170 @@
+.Highlights {
+  &Tabs {
+    @include utils.display-flex-without-justify;
+    gap: utils.rem(40px);
+    margin-bottom: utils.rem(40px);
+    margin-top: utils.rem(10px);
+
+    li {
+      color: variables.$main-black;
+      font-size: utils.rem(20px);
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .Active {
+      border: 1px solid variables.$main-black;
+      padding: utils.rem(12px) utils.rem(24px);
+    }
+  }
+
+  &View {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    cursor: pointer;
+  }
+
+  .HighlightCard {
+    a {
+      position: relative;
+      width: 100%;
+      height: utils.fluid-size(300, 515);
+      padding: utils.fluid-size(12, 20);
+      display: flex;
+      flex-direction: column;
+      &:hover {
+        .Image img {
+          transform: scale(1.05) rotateY(0);
+        }
+      }
+      span {
+        font-weight: 600;
+        font-size: utils.fluid-size(12, 16);
+        text-transform: uppercase;
+
+        &:nth-child(2) {
+          text-transform: unset;
+          font-size: utils.fluid-size(20, 24);
+          margin: utils.fluid-size(12, 24) 0 utils.fluid-size(24, 30) 0;
+        }
+      }
+    }
+  }
+
+  .cardFirst {
+    grid-column: span 2 / span 2;
+    background-color: variables.$main-orange;
+  }
+
+  .cardSecond {
+    grid-column-start: 3;
+    background-color: variables.$main-yellow;
+  }
+
+  .cardThird {
+    grid-column-start: 4;
+    background-color: variables.$main-violet;
+  }
+
+  .cardFourth {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    background-color: variables.$main-green;
+  }
+
+  .cardFifth {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    background-color: variables.$main-antique-gold;
+  }
+
+  .cardSix {
+    grid-row-start: 3;
+    background-color: variables.$main-aquamarine;
+  }
+
+  .cardSeven {
+    grid-row-start: 3;
+    background-color: variables.$main-pink;
+  }
+
+  .cardEight {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+    background-color: variables.$main-blue;
+  }
+
+  .textWhite {
+    color: variables.$main-white;
+  }
+
+  .textBlack {
+    color: variables.$main-black;
+  }
+
+  .Image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img{
+       transition: 0.3s;
+    }
+  }
+  @media (max-width: variables.$breakpoint-laptop-small) {
+    &Tabs {
+      overflow-x: scroll;
+    }
+  }
+  @media (max-width: variables.$breakpoint-tablet) {
+    &View {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 0px;
+    }
+
+    .cardFirst {
+      grid-column: span 2 / span 2;
+      grid-row: 1;
+    }
+
+    .cardSecond {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .cardThird {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .cardFourth {
+      grid-column: span 2 / span 2;
+      grid-row: 3;
+    }
+
+    .cardFifth {
+      grid-column: span 2 / span 2;
+      grid-row: 4;
+    }
+
+    .cardSix {
+      grid-column: 1;
+      grid-row: 5;
+    }
+
+    .cardSeven {
+      grid-column: 2;
+      grid-row: 5;
+    }
+
+    .cardEight {
+      grid-column: span 2 / span 2;
+      grid-row: 6;
+    }
+  }
+}

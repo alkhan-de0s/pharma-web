@@ -1,0 +1,203 @@
+.videoTour {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: utils.rem(56px) 0 utils.rem(45px);
+  .Title {
+    font-weight: 700;
+    font-size: utils.fluid-size(40, 100);
+    line-height: 100%;
+    color: variables.$main-white;
+    margin-bottom: utils.fluid-size(31, 52);
+  }
+}
+
+.layout {
+  display: flex;
+  min-height: utils.rem(500px);
+}
+
+.navigation {
+  width: utils.rem(280px);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.tabList {
+  @include utils.display-flex-column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  gap: utils.rem(16px);
+
+  @media (max-width: variables.$breakpoint-desktop) {
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    gap: utils.rem(32px);
+    margin-bottom: utils.rem(40px);
+    overflow-x: scroll;
+  }
+}
+
+.tabItem {
+  position: relative;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: utils.rem(14px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: utils.rem(0.5px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  &.active {
+    color: variables.$main-white;
+    padding-left: utils.rem(50px);
+    transition: 0.4s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: utils.rem(6px);
+      bottom: 0;
+      width: utils.rem(32px);
+      height: utils.rem(1px);
+      background-color: variables.$main-white;
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    &.active {
+      padding-left: 0;
+      border: utils.rem(1px) solid variables.$main-white;
+      padding: utils.rem(12px) utils.rem(24px);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  position: relative;
+  @include utils.display-flex-column;
+  max-width: utils.rem(1000px);
+}
+
+.videoContainer {
+  position: relative;
+  @include utils.display-flex-center;
+  flex: 1;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: utils.rem(500px);
+  @include utils.display-flex-center;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: utils.rem(80px);
+  height: utils.rem(80px);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @include utils.display-flex-center;
+  box-shadow: 0 utils.rem(8px) utils.rem(32px) rgba(0, 0, 0, 0.3);
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+}
+
+.playIcon {
+  width: utils.rem(32px);
+  height: utils.rem(32px);
+  color: #333;
+  margin-left: utils.rem(4px);
+}
+
+.details {
+  padding: utils.rem(32px) utils.rem(32px) utils.rem(32px) 0;
+  color: variables.$main-white;
+}
+
+.title {
+  font-size: utils.fluid-size(24, 32);
+  font-weight: 700;
+  margin: 0 0 utils.rem(20px) 0;
+  line-height: 1.2;
+  color: variables.$main-white;
+}
+
+.description {
+  font-size: utils.rem(16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+
+  & + & {
+    margin-top: utils.rem(16px);
+  }
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .navigation {
+    width: 100%;
+    order: 1;
+  }
+
+  .content {
+    order: 2;
+  }
+
+  .playButton {
+    width: utils.rem(60px);
+    height: utils.rem(60px);
+  }
+
+  .playIcon {
+    width: utils.rem(24px);
+    height: utils.rem(24px);
+  }
+}

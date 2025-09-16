@@ -1,0 +1,40 @@
+a:not(:last-child) .Rules {
+  border-bottom: utils.rem(2px) solid rgba(from #525151 r g b / 0.5);
+}
+.Rules {
+  padding-bottom: utils.rem(32px);
+  margin-bottom: utils.rem(40px);
+
+  position: relative;
+
+  &:hover {
+    border-bottom: utils.rem(2px) solid
+      rgba(from var(--backgroundColor) r g b / 0.5) !important;
+    .RulesImage {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  &Text {
+    font-family: Nunito Sans;
+    font-weight: 800;
+    font-size: utils.fluid-size(20, 32);
+    line-height: utils.fluid-size(20, 40);
+    text-transform: uppercase;
+    color: variables.$main-black;
+  }
+  &Image {
+    position: absolute;
+    right: var(--imageRight, 100px);
+    top: utils.rem(-100px);
+    border: 8px solid var(--backgroundColor);
+    width: utils.fluid-size(150, 320);
+    height: utils.fluid-size(100, 200);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.3s ease-out;
+  }
+}

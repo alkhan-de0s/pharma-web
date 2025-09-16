@@ -1,0 +1,219 @@
+.Footer {
+  position: relative;
+  a {
+    color: unset;
+  }
+  margin-top: utils.fluid-size(80, 120);
+
+  &Wrapper {
+    background: linear-gradient(to right, #3d3d3d, #8b4a6b);
+    width: 100%;
+
+    .Info {
+      @include utils.display-flex-between;
+      padding: utils.fluid-size(24, 50) 0 utils.fluid-size(24, 50);
+
+      p {
+        color: variables.$main-white;
+        font-size: utils.fluid-size(16, 32);
+        font-weight: 500;
+      }
+
+      button {
+        @include utils.display-flex-center;
+        gap: utils.rem(10px);
+        color: variables.$main-white;
+        font-size: utils.fluid-size(16, 24);
+        font-weight: 500;
+        line-height: utils.rem(30px);
+        padding: utils.rem(12px) utils.rem(24px);
+        border: utils.rem(1px) solid variables.$main-white;
+        svg {
+          height: utils.rem(24px);
+          width: utils.rem(24px);
+          transition: 0.3s ease-in all;
+        }
+
+        &:hover {
+          svg {
+            transform: rotate(45deg);
+            transition: 0.3s ease-in all;
+          }
+        }
+      }
+    }
+    @media (max-width: variables.$breakpoint-tablet) {
+      .Info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: utils.rem(20px);
+      }
+    }
+  }
+
+  .FooterContent {
+    position: relative;
+    // background: linear-gradient(to right, #1e3c72, #8e44ad);
+    overflow: hidden;
+    min-height: 600px;
+
+    &LogoNav {
+      @include utils.display-flex-without-justify;
+      justify-content: space-between;
+      padding-top: utils.rem(40px);
+      gap: utils.rem(25px);
+
+      .LogoNavContent {
+        @include utils.display-flex-without-justify;
+        gap: utils.rem(16px);
+
+        p {
+          max-width: utils.rem(360px);
+          color: variables.$main-white;
+          font-size: utils.rem(14px);
+          font-style: normal;
+          font-weight: 500;
+          line-height: utils.rem(20px);
+          /* 142.857% */
+        }
+      }
+
+      .List {
+        display: flex;
+        list-style: none;
+        gap: utils.fluid-size(24, 28);
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+
+        li {
+          font-size: utils.rem(15px);
+          font-weight: 500;
+          color: variables.$main-white;
+          text-transform: uppercase;
+          position: relative;
+        }
+
+        .DropdownItem {
+          position: relative;
+
+          button {
+            all: unset;
+            display: flex;
+            align-items: center;
+            gap: utils.rem(6px);
+            cursor: pointer;
+          }
+
+          .ArrowIcon {
+            transition: transform 0.3s ease;
+          }
+
+          .ArrowOpen {
+            transform: rotate(180deg);
+          }
+          a {
+            color: unset;
+          }
+          .Dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: utils.rem(12px) 0;
+            border-radius: utils.rem(6px);
+            margin-top: utils.rem(8px);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: utils.rem(10px);
+            min-width: utils.rem(150px);
+            @media (max-width: variables.$breakpoint-laptop-small) {
+              position: static;
+              padding: utils.rem(10px) 0;
+              margin-top: utils.rem(4px);
+            }
+          }
+        }
+      }
+
+      @media (max-width: variables.$breakpoint-laptop-small) {
+        flex-direction: column;
+        gap: utils.rem(40px);
+        align-items: flex-start;
+        .List {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &Copyright {
+      @include utils.display-flex-without-justify;
+      justify-content: space-between;
+      margin: utils.fluid-size(40, 50) 0 utils.fluid-size(32, 50);
+
+      span {
+        color: variables.$main-white;
+        font-size: utils.rem(16px);
+        font-weight: 400;
+        line-height: utils.rem(22px);
+      }
+      a {
+        color: unset;
+      }
+
+      .ListSocial {
+        @include utils.display-flex-center;
+        list-style: inside;
+        gap: utils.rem(12px);
+
+        li {
+          color: variables.$main-white;
+          font-size: utils.rem(16px);
+          line-height: utils.rem(22px);
+
+          &:first-child {
+            list-style-type: none;
+          }
+
+          cursor: pointer;
+        }
+      }
+
+      @media (max-width: variables.$breakpoint-tablet) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: utils.rem(40px);
+      }
+    }
+
+    &Scroll {
+      @include utils.display-flex-column;
+      align-items: flex-end;
+      gap: utils.rem(7px);
+      cursor: pointer;
+      svg {
+        margin-right: utils.rem(5px);
+      }
+      span {
+        color: variables.$main-white;
+        font-size: utils.rem(15px);
+        font-weight: 500;
+        line-height: utils.rem(18px);
+      }
+    }
+
+    .img {
+      position: relative;
+      height: utils.fluid-size(127, 347);
+      width: 100%;
+      img{
+        object-fit: fill;
+      }
+    }
+  }
+
+  .FooterContent > * {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,69 @@
+.languageSwitcher {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+  &::after{
+    position: absolute;
+    content:"";
+    height: utils.rem(40px);
+    width: utils.rem(80px);
+  }
+}
+
+.trigger {
+  @include utils.display-flex-without-justify;
+  gap: utils.rem(8px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: utils.rem(6px) utils.rem(8px);
+  border-radius: utils.rem(8px);
+  color: variables.$main-white;
+  transition: background 0.3s;
+  font-size: utils.rem(15px);
+  font-weight:500;
+
+  img {
+    border-radius: utils.rem(2px);
+  }
+
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.dark{
+  color: variables.$main-black!important;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: utils.rem(6px);
+  background: variables.$background-events;
+  border-radius: utils.rem(8px);
+  overflow: hidden;
+  box-shadow: 0 utils.rem(2px) utils.rem(8px) rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  min-width: 100%;
+
+  .item {
+     @include utils.display-flex-without-justify;
+    flex-direction: column;
+    gap: utils.rem(8px);
+    padding: utils.rem(8px) utils.rem(12px);
+    color: variables.$main-black;
+    cursor: pointer;
+    font-size: utils.rem(14px);
+    transition: background 0.2s;
+
+    img {
+      border-radius: utils.rem(2px);
+    }
+
+    &:hover {
+      background: variables.$background-breadcrumb;
+    }
+  }
+}

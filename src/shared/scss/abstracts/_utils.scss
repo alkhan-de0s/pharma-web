@@ -1,0 +1,105 @@
+@use "sass:math";
+@use "sass:list";
+$base-font-size: 16px;
+
+@function rem($px) {
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+@function fluid-size($min-px, $max-px, $min-vw: 375, $max-vw: 1440) {
+  $min: $min-px * 1;
+  $max: $max-px * 1;
+  $min-viewport: $min-vw * 1;
+  $max-viewport: $max-vw * 1;
+
+  $slope: math.div($max - $min, $max-viewport - $min-viewport);
+
+  $y-intercept: $min - $slope * $min-viewport;
+
+  $min-rem: math.div($min, 16);
+  $max-rem: math.div($max, 16);
+  $y-intercept-rem: math.div($y-intercept, 16);
+
+  $slope-percent: $slope * 100;
+
+  @return clamp(
+    #{$min-rem}rem,
+    #{$y-intercept-rem}rem + #{$slope-percent}vw,
+    #{$max-rem}rem
+  );
+}
+
+@mixin display-flex-without-justify {
+  display: flex;
+  align-items: center;
+}
+
+@mixin display-flex-center($omit: ()) {
+  $styles: (
+    display: flex,
+    align-items: center,
+    justify-content: center,
+  );
+   @each $prop, $val in $styles {
+    @if not list.index($omit, $prop) {
+      #{$prop}: #{$val};
+    }
+  }
+}
+
+@mixin display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin display-flex-between($omit: ()) {
+  $styles: (
+    display: flex,
+    align-items: center,
+    justify-content: space-between,
+  );
+
+  @each $prop, $val in $styles {
+    @if not list.index($omit, $prop) {
+      #{$prop}: #{$val};
+    }
+  }
+}
+
+@mixin display-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin absolute-container {
+  max-width: rem(1440px);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: rem(50px);
+
+  @media (max-width: rem(768px)) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (max-width: rem(600px)) {
+    .container {
+      padding-inline: 1rem;
+    }
+  }
+}
+
+@mixin w-container {
+  max-width: rem(1440px);
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: rem(50px);
+
+  @media (max-width: rem(768px)) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (max-width: rem(600px)) {
+    .container {
+      padding-inline: 1rem;
+    }
+  }
+}

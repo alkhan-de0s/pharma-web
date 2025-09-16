@@ -1,0 +1,60 @@
+.Card {
+  @include utils.display-flex-center;
+  flex-wrap: wrap;
+  gap: utils.rem(6px);
+
+  &Wrapper {
+    background-color: variables.$background-events;
+    height: utils.fluid-size(188, 188);
+    width: utils.fluid-size(343, 438);
+    padding: utils.fluid-size(14, 32) 0 0 utils.fluid-size(14, 56);
+    @include utils.display-flex-column;
+    gap: utils.rem(25px);
+    &Icon {
+      @include utils.display-flex-center((justify-content));
+      gap: utils.rem(12px);
+      svg {
+        path {
+          stroke: variables.$main-gray;
+          fill: variables.$main-gray;
+        }
+      }
+      span {
+        font-weight: 700;
+        font-size: utils.rem(20px);
+        color: variables.$main-black;
+      }
+    }
+    ul {
+      @include utils.display-flex-column;
+      gap: utils.rem(8px);
+      li {
+        font-weight: 500;
+        font-size: utils.rem(18px);
+        color: variables.$main-gray;
+        max-width: utils.rem(324px);
+      }
+    }
+    &Url {
+      a {
+        display: flex;
+        gap: utils.rem(10px);
+        font-family: Archivo;
+        font-weight: 500;
+        font-size: utils.rem(18px);
+        color:#2F79E9;
+        line-height: 100%;
+        svg{
+          transition: 0.3s ease-in all;
+        }
+
+        &:hover{
+          svg{
+            transform: rotate(45deg);
+          transition: 0.3s ease-in all;
+        }
+        }
+      }
+    }
+  }
+}

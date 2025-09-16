@@ -1,0 +1,136 @@
+{
+  "HomePage": {
+    "title": "Salam dunya!",
+    "about": "Haqqimizda səhifəsinə keçin",
+    "trusted-by": "Sevilən ulduzlar",
+    "how-it-works": "Necə işləyir?",
+    "proof-speed": "Sürətimizin sübutu",
+    "over-90-events": "90-dan çox fərqli tədbir, hər biri cəmi 3 günə hazırlanıb.",
+    "request-submission": "Əlaqə və ilkin müraciət",
+    "request-submission-title": "Tərəfdaşlar və təşkilatçılar bizə tədbirlə bağlı ilkin müraciət edirlər — bu, adətən tarix, format, texniki tələblər və istəkləri əhatə edir. Hər şey qısa brif ilə başlayır.",
+    "discovery-call": "Texniki brief və razılaşma",
+    "discovery-call-title": "İlkin olaraq tərəfdaş məkana ilk dəfə gəlirsə, biz onu Crystal Hall-un müxtəlif zalları ilə tanış edirik. Burada hər zalın tutumu, texniki imkanları, səhnə yerləşimi və digər məlumatlar verilir. Tədbirin formatına uyğun olaraq detallı texniki brief toplanır və tərəflər arasında razılaşma sənədi (müqavilə) imzalanır.",
+    "technical-blueprint": "Hazırlıq mərhələsi",
+    "technical-blueprint-title": " Müqavilə bağlandıqdan sonra biz hazırlıq işlərinə başlayırıq. Bu mərhələdə montaj planı, texniki komandaların bölgüsü və son tarix müəyyən olunur.",
+    "seal-deal": "Tədbir günü — texniki dəstək",
+    "seal-deal-title": "Tədbir günü texniki və koordinasiya komandamız tam heyətlə zalda olur. İstənilən situasiyada operativ reaksiya və davamlı dəstək göstərilir.",
+    "event-support": "Demontaj və yekun təhvil",
+    "event-support-title": "Tədbirdən sonra avadanlıqlar sökülür və zal ilkin vəziyyətə qaytarılır. Əgər tərəfdaşın ardıcıl tədbirləri varsa — növbəti quraşdırmalara dərhal başlanılır.",
+    "virtual-tour": "Virtual tur",
+    "click-to-explore": "Kəşf etmək üçün klikləyin",
+    "explore": "Kəşf edin",
+    "prohibition-and-rules": "Qadağalar <span>&</span> qaydalar",
+    "technical-system": "Texniki sistem",
+    "ticket-info": "Bilet məlumatı",
+    "catering-information": "Catering məlumatı",
+    "crystall-hall-hosts": "CRYSTAL HALL qürurla ev sahibliyi edir",
+    "support-partner": "Dəstəyini dərindən qiymətləndirdiyimiz",
+    "partner": "Partnyorlar",
+    "stage-setup": "Səhnə Quraşdırılması",
+    "participants": "İştirakçılar",
+    "days": "{count} gün ərzində",
+    "today": "Bugün",
+    "days-ago": "{count} gün əvvəl",
+    "glorious" : "Əzəmətli Anlar"
+  },
+  "Header": {
+    "home": "Bosh sahifa",
+    "about-us": "Biz haqimizda",
+    "products": "Mahsulotlar",
+    "gallery": "Galereya",
+    "partners": "Hamkorlar",
+    "certificates": "Sertifikatlar",
+    "contact-us": "Bog‘lanish"
+  },
+  "Footer": {
+    "interested-in-learning": "ƏTRAFLI MƏLUMAT ALMAQ İSTƏYİRSİNİZ?",
+    "copywrite": "Bütün hüquqlar qorunur. Hazırlayan:",
+    "about-us": "Haqqımızda",
+    "halls": "Zallar",
+    "events": "Tədbirlər",
+    "plan-your-visit": "Ziyarətinizi Planlaşdırın",
+    "faq": "Tez-tez verilən suallar",
+    "contact-us": "Bizimlə əlaqə",
+    "our-history": "Tariximiz",
+    "ticket-info": "Bilet Məlumatı",
+    "catering-information": "Catering Məlumatı",
+    "rules": "Qaydalar və Tələblər",
+    "highlights": "Əsas Anlar",
+    "memories": "Xatirələr",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Youtube",
+    "scroll": "Aşağı sürüşdürün"
+  },
+  "About": {
+    "virtual-tour-of-crystall": "Crystal Hall-a Virtual Səyahət",
+    "our-mission": "Missiyamız",
+    "our-vission": "Vizyonumuz"
+  },
+  "Catering": {
+    "catering-information": "Catering məlumatı",
+    "space-details": "Məkan haqqında məlumat"
+  },
+  "Halls": {
+    "size": "Ölçü",
+    "capacity": "Tutum",
+    "recommended-event": "Tövsiyə olunan tədbir növləri",
+    "bonus-areas": "Əlavə Sahələr"
+  },
+  "Events": {
+    "date": "Tarix",
+    "hall": "Zal",
+    "number-of-participants": "İştirakçı sayı",
+    "partner": "Tərəfdaş",
+    "additional-info": "Əlavə Məlumat",
+    "rules": "Qaydalar",
+    "ticket-info": "Bilet Məlumatı",
+    "no-events": "Bu kateqoriyada tədbir tapılmadı."
+  },
+  "Plan-Visit": {
+    "plan-your-visit": "Ziyarətinizi Planlaşdırın",
+    "nearby-hotels": "Yaxınlıqdakı Otellər",
+    "nearby-restourants": "Yaxınlıqdakı Restoranlar",
+    "experience-baku": "Bakını kəşf et",
+    "getting-here": "Bura Necə Gəlmək Olar",
+    "km": "km",
+    "distance-to-crystall": "Crystal Hall-a məsafə",
+    "star": "Ulduz",
+    "contact": "Əlaqə",
+    "address": "Ünvan",
+    "website": "Veb sayt",
+    "open-hours": "İş saatları",
+    "how-to-get-crystall": "Crystal Hall-a necə getmək olar"
+  },
+  "Contact": {
+    "contact": "Əlaqə",
+    "get-in-touch": "BİZİMLƏ ƏLAQƏ SAXLAYIN",
+    "address": "Ünvan",
+    "adress-title": "Bakı, Azərbaycan Dövlət Bayrağı Meydanı Baku Crystal Hall",
+    "we-are-map": "Xəritə",
+    "react-out": "Bizimlə əlaqə saxlayın, 24 saat ərzində cavab verəcəyik",
+    "form-title": "Tədbir yaxınlaşır? Hazırlıqlara başlayın!",
+    "event-type": "Tədbir növü",
+    "number-of-attendees": "İştirakçı sayı",
+    "approximate-date": "Təxmini tarix",
+    "email": "E-poçt",
+    "message": "Mesaj",
+    "send": "Göndər"
+  },
+  "Visual-tour": {
+    "tour": "360° Tur"
+  },
+  "NotFound": {
+    "title": "Səhifə Tapılmadı",
+    "description": "Hər yeri axtardıq, amma axtardığınız səhifə bizdən qaçmış kimi görünür. Aşağıdakı düymə ilə əsas səhifəyə qayıda bilərsiniz.",
+    "returnHome": "Əsas səhifəyə qayıt"
+  },
+  "Our-Partners": {
+    "our-partners": "Tərəfdaşlarımız",
+    "home-page": "Əsas səhifə"
+  },
+  "Error": {
+    "title": "Nə isə səhv oldu!",
+    "tryAgain": "Yenidən cəhd et"
+  }
+}

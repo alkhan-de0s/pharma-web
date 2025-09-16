@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 3.125rem;
+  max-width: variables.$breakpoint-desktop;
+  position: relative;
+  
+  &--extend-right {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: max(3.125rem, calc((100vw - #{variables.$breakpoint-desktop}) / 2 + 3.125rem));
+    padding-right: 0;
+  }
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .container--extend-right {
+    padding-left: 3.125rem;
+  }
+}
+
+@media (max-width: variables.$breakpoint-tablet) {
+  .container {
+    padding-inline: 1.5rem;
+    
+    &--extend-right {
+      padding-left: 1.5rem;
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .container {
+    padding-inline: 1rem;
+    
+    &--extend-right {
+      padding-left: 1rem;
+      padding-right: 0;
+
+    }
+  }
+}

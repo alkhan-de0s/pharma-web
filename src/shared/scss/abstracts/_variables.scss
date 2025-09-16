@@ -1,0 +1,48 @@
+@use 'utils' as utils;
+$breakpoint-desktop: utils.rem(1440px);
+$breakpoint-desktop-small: utils.rem(1200px);
+$breakpoint-laptop: utils.rem(1024px);
+$breakpoint-laptop-small: utils.rem(992px);
+
+$breakpoint-tablet: utils.rem(768px);
+$breakpoint-mobile: utils.rem(600px);
+$breakpoint-mobile-small: utils.rem(375px);
+
+$main-body-color:#f3f3f3;
+$main-white: #ffffff;
+$main-orange: #EC4B23;
+$main-yellow: #F6F571;
+$main-violet: #A185F3;
+$main-green : #4EAF75;
+$main-green-blur:#039803;
+$main-antique-gold: #C9B37A;
+$main-aquamarine: #68D5BF;
+$main-pink : #E866AB;
+$main-blue: #719DD0;
+$main-black: #0E0001;
+$main-black-second:#070506;
+$main-gray : #58585A;
+$main-gray-second:#999B9E;
+$main-red : #C9161E;
+$main-gray-third:#7D7E81;
+$border-red: #940709;
+
+
+
+$background-breadcrumb:#F5F5F6;
+$background-events:#F2F2F3;
+
+
+
+$primary-gradient: linear-gradient(135deg, #6a4c93, #c06c84);
+$icon-size: utils.rem(60px);
+$icon-size-mobile: utils.rem(50px);
+$connector-width: utils.rem(2px);
+$animation-duration: 0.8s;
+$animation-delay: 0.6s;
+$transition-duration: 0.3s;
+
+
+$card-width: 320px;
+$card-height: 340px;
+$content-height: 100px;

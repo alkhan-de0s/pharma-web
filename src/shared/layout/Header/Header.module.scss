@@ -1,0 +1,446 @@
+.Header {
+  width: 100%;
+  padding: utils.rem(10px) 0;
+  z-index: 3;
+  width: 100%;
+  position: sticky;
+
+  &Inner {
+    @include utils.display-flex-center((justify-content));
+    justify-content: space-between;
+      background-color: variables.$main-green-blur;
+      border-radius: utils.rem(20px);
+    &Logo {
+      cursor: pointer;
+      width: utils.rem(120px);
+      height: utils.rem(72px);
+     }
+  }
+
+  a {
+    color: unset;
+    position: relative;
+    z-index: 10;
+    display: block;
+  }
+}
+
+.DesktopNav {
+  display: flex;
+  align-items: center;
+
+  .List {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: utils.rem(28px);
+
+    li {
+      font-size: utils.rem(15px);
+      line-height: utils.rem(22px);
+      font-weight: 500;
+      color: variables.$main-white;
+      cursor: pointer;
+      transition: color 0.2s;
+      text-transform: uppercase;
+      display: inline-block;
+      position: relative;
+
+      &:has(:nth-child(2):last-child) {
+        @include utils.display-flex-without-justify;
+        gap: utils.rem(6px);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: utils.rem(1px);
+        background: variables.$border-red;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+
+    .DropdownTriggerAbout,
+    .DropdownTriggerEvents {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: utils.rem(60px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        z-index: 1;
+      }
+
+      &:hover::before {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    .active {
+      border-bottom: 1px solid variables.$border-red;
+    }
+  }
+
+  .Divider {
+    height: utils.rem(22px);
+    width: utils.rem(1px);
+    background-color: variables.$main-white;
+    margin: 0 utils.rem(24px);
+  }
+}
+
+.BurgerButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: utils.rem(24px);
+  height: utils.rem(18px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+
+  span {
+    display: block;
+    width: 100%;
+    height: utils.rem(2px);
+    background-color: variables.$main-white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.dark span {
+    background-color: variables.$main-black;
+  }
+}
+
+.dark {
+  position: relative;
+  .List {
+    li {
+      color: variables.$main-black !important;
+    }
+  }
+  .Divider {
+    background-color: variables.$main-black !important;
+  }
+  .trigger {
+    color: variables.$main-black !important;
+  }
+}
+
+.DropdownMenuAbout,
+.DropdownMenuEvents {
+  position: fixed;
+  top: utils.rem(84px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.DropdownMenuAbout.dark,
+.DropdownMenuEvents.dark {
+  background: #999b9e33;
+}
+
+.DropdownTriggerAbout::after {
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.DropdownTriggerAbout:hover::after,
+.DropdownTriggerAbout.active::after {
+  transform: scaleX(1);
+}
+
+.DropdownActive {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.DropdownContent {
+  padding: utils.rem(16px) 0;
+  @include utils.display-flex-center;
+  gap: utils.rem(48px);
+
+  .active {
+    border-bottom: 1px solid variables.$border-red;
+  }
+
+  a {
+    color: unset;
+  }
+}
+
+.DropdownSection {
+  font-weight: 500;
+  font-size: utils.rem(15px);
+  line-height: utils.rem(22px);
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: 0.3s ease-in;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.MobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  background: rgba(62, 62, 64, 0.8);
+  backdrop-filter: blur(utils.rem(60px));
+
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  &.dark {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(utils.rem(60px));
+  }
+
+  &Open {
+    transform: translateX(0);
+  }
+}
+
+.MobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: utils.rem(16px) utils.rem(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+
+  .dark & {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+.Lang {
+  @include utils.display-flex-center((justify-content));
+  .CloseButton {
+    background: none;
+    border: none;
+    font-size: utils.rem(32px);
+    color: variables.$main-white;
+    cursor: pointer;
+    padding: 0;
+    width: utils.rem(32px);
+    height: utils.rem(32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dark & {
+      color: variables.$main-black;
+    }
+  }
+}
+
+.MobileNav {
+  padding: utils.rem(30px) utils.rem(24px);
+  display: flex;
+  flex-direction: column;
+  gap: utils.rem(30px);
+}
+
+.MobileNavItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: utils.rem(20px);
+
+  .dark & {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    color: variables.$main-white;
+    text-decoration: none;
+    font-size: utils.rem(18px);
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+
+    .dark & {
+      color: variables.$main-black;
+    }
+  }
+}
+
+.MobileNavTrigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    color: variables.$main-white;
+    font-size: utils.rem(18px);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    .dark & {
+      color: variables.$main-black;
+    }
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &.active svg {
+    transform: rotate(180deg);
+  }
+}
+
+.MobileDropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: utils.rem(20px);
+
+  &.active {
+    max-height: utils.rem(200px);
+    padding-top: utils.rem(20px);
+  }
+
+  a {
+    display: block;
+    padding: utils.rem(8px) 0;
+    font-size: utils.rem(16px);
+    font-weight: 400;
+    opacity: 0.8;
+    text-transform: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.MobileLanguageSwitcher {
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  background: #b2b2b3;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 960px) {
+  .DesktopNav {
+    display: none;
+  }
+
+  .BurgerButton {
+    display: flex;
+  }
+
+  .Header {
+    padding-inline: utils.rem(24px);
+  }
+  .DropdownMenuAbout,
+  .DropdownMenuEvents {
+    display: none;
+  }
+}
+
+@media (max-width: variables.$breakpoint-tablet) {
+  .Header {
+    padding-inline: utils.rem(24px);
+  }
+
+  .DropdownContent {
+    padding: utils.rem(30px) utils.rem(24px);
+    flex-direction: column;
+    gap: utils.rem(30px);
+  }
+
+  .DropdownSection {
+    min-width: auto;
+  }
+}
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .Header {
+    padding-inline: utils.rem(16px);
+  }
+
+  .DropdownMenuAbout,
+  .DropdownMenuEvents {
+    top: utils.rem(120px);
+  }
+
+  .DropdownContent {
+    padding: utils.rem(20px) utils.rem(16px);
+    gap: utils.rem(20px);
+    flex-direction: column;
+  }
+
+  .MobileNav {
+    padding: utils.rem(20px) utils.rem(16px);
+    gap: utils.rem(20px);
+  }
+
+  .MobileMenuHeader {
+    padding: utils.rem(16px);
+  }
+
+  .MobileNavItem {
+    padding-bottom: utils.rem(15px);
+  }
+
+  .MobileNavTrigger span,
+  .MobileNavItem a {
+    font-size: utils.rem(16px);
+  }
+}

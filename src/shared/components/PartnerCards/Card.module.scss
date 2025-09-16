@@ -1,0 +1,97 @@
+.Redirect{
+  display: flex;
+  gap: utils.rem(20px);
+  flex-wrap: wrap;
+}
+.card {
+  background-color: variables.$background-breadcrumb;
+  padding: utils.rem(14px);
+  width: utils.fluid-size(320,320);
+  height: utils.fluid-size(224,240);
+  @include utils.display-flex-column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  .arrow{
+    svg{
+        transform: rotate(0);
+      
+    }
+  }
+
+  &:hover {
+    .arrow {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  @media (max-width:variables.$breakpoint-mobile) {
+    width: 100%;
+    margin-bottom: utils.rem(20px);
+  }
+}
+
+.logo {
+  @include utils.display-flex-center;
+  margin-top: utils.rem(20px);
+}
+
+.logoImage {
+  height: utils.rem(80px);
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.logoMain {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.logoSub {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-top: -2px;
+}
+
+.content {
+  @include utils.display-flex-between;
+  align-items: flex-end;
+  background-color: variables.$main-white;
+  padding: utils.rem(14px);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.arrow {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  height: utils.rem(28px);
+  width: utils.rem(28px);
+  border: utils.rem(1px) solid variables.$main-black;
+  svg {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    color: #2c3e50;
+  }
+}

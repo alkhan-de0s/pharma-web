@@ -1,0 +1,31 @@
+.diamondWrapper {
+  background-color: var(--background-color);
+  height: utils.fluid-size(388, 707);
+  width: utils.fluid-size(660, 660);
+  @include utils.display-flex-column;
+  @include utils.display-flex-center((display,align-items));
+  padding: utils.fluid-size(20,40);
+  gap: utils.rem(40px);
+
+  span {
+    color: variables.$main-white;
+    font-family: "Nunito Sans";
+    font-size: utils.fluid-size(28,48);
+    line-height: utils.fluid-size(30,60);
+    font-weight: 900;
+    text-transform: uppercase;
+    max-width: utils.rem(300px);
+  }
+
+ .diamondFigure{
+  position: relative;
+        width: utils.fluid-size(290, 580);
+        height: utils.fluid-size(235, 467);
+        max-width: utils.rem(580px);
+        max-height: utils.rem(467px);
+}
+
+@media (max-width:variables.$breakpoint-tablet) {
+  width: 100%;
+}
+}

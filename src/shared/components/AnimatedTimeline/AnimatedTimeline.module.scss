@@ -1,0 +1,116 @@
+.timeline {
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all variables.$animation-duration cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.iconContainer {
+  position: relative;
+  margin-right: 1.5rem;
+  @include utils.display-flex-column;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon {
+  width: variables.$icon-size;
+  height: variables.$icon-size;
+  border-radius: 50%;
+  background: variables.$main-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 utils.rem(4px) utils.rem(12px) rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: variables.$icon-size-mobile;
+    height: variables.$icon-size-mobile;
+    font-size: 1.2rem;
+  }
+}
+
+.connector {
+  position: absolute;
+  top: calc(#{variables.$icon-size} - #{variables.$connector-width}/2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: variables.$connector-width;
+  height: calc(4.7rem + #{variables.$icon-size}/2);
+  background: variables.$main-white;
+  opacity: 0;
+  transform-origin: top center;
+  transform: translateX(-50%) scaleY(0);
+  transition: all (variables.$animation-delay * 0.8) ease-out;
+  z-index: 1;
+
+  &.connectorVisible {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleY(1);
+  }
+
+
+  &.lastConnector {
+    display: none;
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    top: calc(#{variables.$icon-size-mobile} - #{variables.$connector-width}/2);
+    height: calc(5rem + #{variables.$icon-size-mobile}/2);
+  }
+}
+
+
+.timelineItem:not(:last-child) .connector {
+  display: block;
+}
+
+.timelineItem:last-child .connector {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  color: variables.$main-white;
+  margin-top: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: variables.$main-white;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    font-size: 1.3rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  line-height: 1.5;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    font-size: 0.9rem;
+  }
+}

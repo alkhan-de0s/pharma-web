@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./Marquee.module.scss";
-import { type Partners as PartnerType } from "@/modules/Home/model";
+// import { type Partners as PartnerType } from "@/modules/Home/model";
 import { getImageUrl } from "@/shared/helper/getImageUrl";
 interface IMarqueeProps {
-  data: PartnerType[];
+  data: any[];
 }
 export default function Marquee({ data }: IMarqueeProps) {
   return (

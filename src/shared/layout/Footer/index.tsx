@@ -1,6 +1,6 @@
 "use client";
 import { Link } from "@/i18n/navigation";
-import { AnimatedBackground, Container, RenderIf } from "@/shared/components";
+import {  Container, RenderIf } from "@/shared/components";
 import { Urls } from "@/shared/constants/urls";
 import { ArrowDown, ArrowRight } from "@/shared/icons";
 import { useTranslations } from "next-intl";
@@ -35,7 +35,6 @@ const Footer = () => {
   const router = useRouter();
   return (
     <footer className={styles.Footer}>
-      <AnimatedBackground />
       <div className={styles.FooterWrapper}>
         <Container>
           <section className={styles.Info}>

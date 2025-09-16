@@ -95,6 +95,11 @@ button {
   .swiper-pagination-bullet-active {
     background-color: #039803 !important;
   }
+
+  .my-custom-button-disabled{
+    opacity: 0.5;
+    cursor: unset;
+  }
 }
 
 @keyframes kbrns_zoomOutIn {

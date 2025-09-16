@@ -1,8 +1,6 @@
-import dynamic from 'next/dynamic'
 import React from 'react'
 import Cards from './components/Cards'
 import Slider from './components/Slider'
-
 const Home = () => {
   return (
     <div >

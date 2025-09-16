@@ -117,6 +117,7 @@ const Header = () => {
             </nav>
 
             <button
+            name="burger_button"
               className={`${styles.BurgerButton} ${styles[headerStyle]}`}
               onClick={toggleBurger}
             >
@@ -148,7 +149,7 @@ const Header = () => {
             <div className={styles.MobileLanguageSwitcher}>
               <LanguageSwitcher variant="dark" />
             </div>
-            <button className={styles.CloseButton} onClick={closeBurger}>
+            <button name="close_button" className={styles.CloseButton} onClick={closeBurger}>
               <span>×</span>
             </button>
           </div>

@@ -2,13 +2,12 @@
 import { Link } from "@/i18n/navigation";
 import { Container, LanguageSwitcher } from "@/shared/components";
 import { Urls } from "@/shared/constants/urls";
-import { ArrowDown } from "@/shared/icons";
-import Image from "next/image";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { isUrlMatched } from "@/shared/helper/urlChecker";
-import styles from "./Header.module.scss";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import styles from "./Header.module.scss";
 const Header = () => {
   const t = useTranslations("Header");
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -17,13 +16,7 @@ const Header = () => {
   const pathname = usePathname() ?? "";
   const headerStyle = isUrlMatched(pathname) ? "dark" : "default";
 
-  const handleMouseEnter = (dropdown: string) => {
-    setActiveDropdown(dropdown);
-  };
 
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
 
   const toggleBurger = () => {
     setIsBurgerOpen(!isBurgerOpen);

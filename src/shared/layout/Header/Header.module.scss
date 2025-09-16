@@ -8,17 +8,15 @@
   &Inner {
     @include utils.display-flex-center((justify-content));
     justify-content: space-between;
-      background-color: variables.$main-green-blur;
-      border-radius: utils.rem(20px);
     &Logo {
       cursor: pointer;
       width: utils.rem(120px);
       height: utils.rem(72px);
-     }
+    }
   }
 
   a {
-    color: unset;
+    color: black;
     position: relative;
     z-index: 10;
     display: block;
@@ -101,7 +99,7 @@
   .Divider {
     height: utils.rem(22px);
     width: utils.rem(1px);
-    background-color: variables.$main-white;
+    background-color: variables.$main-black;
     margin: 0 utils.rem(24px);
   }
 }
@@ -122,7 +120,7 @@
     display: block;
     width: 100%;
     height: utils.rem(2px);
-    background-color: variables.$main-white;
+    background-color: variables.$main-black;
     transition: all 0.3s ease;
     transform-origin: center;
   }

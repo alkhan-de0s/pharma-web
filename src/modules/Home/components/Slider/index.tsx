@@ -38,7 +38,7 @@ export default function App() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="h-[500px] home-slider"
+        className="h-[500px] home-slider mb-10"
       >
         <SwiperSlide>
           <Image

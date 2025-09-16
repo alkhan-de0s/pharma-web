@@ -1,7 +1,7 @@
 @use "utils";
 @use "variables";
 
-* {
+html,body {
   font-family: "Archivo", sans-serif;
   margin: 0;
   padding: 0;
@@ -30,45 +30,7 @@ button {
   cursor: pointer;
 }
 
-.w-full {
-  width: 100% !important;
-}
 
-.flex {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.block {
-  display: block;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
 
 .home-slider-global {
   min-height: 100vh;

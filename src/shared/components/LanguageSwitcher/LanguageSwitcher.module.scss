@@ -18,7 +18,6 @@
   cursor: pointer;
   padding: utils.rem(6px) utils.rem(8px);
   border-radius: utils.rem(8px);
-  color: variables.$main-white;
   transition: background 0.3s;
   font-size: utils.rem(15px);
   font-weight:500;
@@ -30,6 +29,11 @@
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+  svg{
+    path{
+      stroke:variables.$main-black;
+    }
   }
 }
 .dark{

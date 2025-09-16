@@ -22,5 +22,6 @@ export const enum Urls {
   YOUR_VISIT_RESTAURANTS_INNER = "/your-visit/restaurants/:inner",
   YOUR_VISIT_EXPERIENCE= "/your-visit/experience-in-baku",
   YOUR_VISIT_EXPERIENCE_INNER= "/your-visit/experience-in-baku/:inner",
+  YOUR_VISIT_GETTING = "/your-visit/getting-here",
   TOUR = "/tour",
 }

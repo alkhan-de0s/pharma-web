@@ -1,13 +1,18 @@
 {
   "HomePage": {
-    "card-title":"Eng yaxshi sog‘liqni saqlash amaliyotlari!",
-    "card-description":"Sog‘lig‘ingizni yaxshilash uchun turli xizmatlarni taklif qilamiz.",
+    "card-title": "Eng yaxshi sog‘liqni saqlash amaliyotlari!",
+    "card-description": "Sog‘lig‘ingizni yaxshilash uchun turli xizmatlarni taklif qilamiz.",
     "dental": "Ayollarning reproduktiv tizimiga oid kasalliklarni aniqlash, davolash va oldini olish bilan shug'ullanuvchi tibbiyot sohasi. Bu soha hayz ko'rish, homiladorlik, menopauza va boshqa holatlar bilan bog'liq kasalliklarni o'z ichiga oladi.",
-  "dental-title": "Ginekologiya",
-  "cardiology": "Endokrin tizimni o'rganish va shu tizim bilan bog'liq kasalliklarni davolashga qaratilgan tibbiyot sohasi. Bu soha gormonal buzilishlar, diabet, qalqonsimon bez kasalliklari va moddalar almashinuvini o'z ichiga oladi.",
-  "cardiology-title": "Endokrinologiya",
-  "dermatology": "Bolalar kasalliklarini aniqlash, davolash va oldini olish bilan shug'ullanuvchi tibbiyot sohasi. Bu soha bolalar rivoji, o'sishi, emlash va umumiy salomatlikni qo'llab-quvvatlashga qaratilgan.",
-  "dermatology-title": "Pediatriya"
+    "dental-title": "Ginekologiya",
+    "cardiology": "Endokrin tizimni o'rganish va shu tizim bilan bog'liq kasalliklarni davolashga qaratilgan tibbiyot sohasi. Bu soha gormonal buzilishlar, diabet, qalqonsimon bez kasalliklari va moddalar almashinuvini o'z ichiga oladi.",
+    "cardiology-title": "Endokrinologiya",
+    "dermatology": "Bolalar kasalliklarini aniqlash, davolash va oldini olish bilan shug'ullanuvchi tibbiyot sohasi. Bu soha bolalar rivoji, o'sishi, emlash va umumiy salomatlikni qo'llab-quvvatlashga qaratilgan.",
+    "dermatology-title": "Pediatriya",
+    "about-us": "Biz haqimizda",
+    "about-us-first": "Renessanspharma kompaniyasi Germaniya, Yevropa, Amerika va Turkiya kompaniyalari bilan hamkorlik qilib, ularning biologik faol qo‘shimchalari va dori vositalarini Ozarbayjonga import qilib, yuqori sifatli mahsulotlari bilan ajralib turadigan mahalliy kompaniyadir.",
+    "about-us-second": "Asosiy faoliyatimiz – preparatlarni Ozarbayjonga import qilish, ularning marketingi va ulgurji savdosidan iborat. Kompaniyamiz 2015-yildan rasmiy faoliyatini boshlagan.",
+    "about-us-third": "Renessanspharma – faoliyatini bitta preparat bilan boshlagan va hozirda turli mineral va vitaminlar bilan Ozarbayjon bozorida o‘z munosib o‘rnini egallagan, bildirilgan ishonchni oqlashga intilayotgan va barqaror rivojlanishni o‘ziga asosiy maqsad qilib qo‘ygan kompaniyadir.",
+    "contact-us": "Bog‘lanish"
   },
   "Header": {
     "home": "Bosh sahifa",
@@ -109,8 +114,8 @@
     "title": "Nə isə səhv oldu!",
     "tryAgain": "Yenidən cəhd et"
   },
-   "Seo":{
-    "medicine":"dori",
-    "description" : "Renessanspharma sifatli dori-darmonlarni eng qisqa vaqt ichida sizning xizmatingizga yetkazib beramiz."
+  "Seo": {
+    "medicine": "dori",
+    "description": "Renessanspharma sifatli dori-darmonlarni eng qisqa vaqt ichida sizning xizmatingizga yetkazib beramiz."
   }
 }

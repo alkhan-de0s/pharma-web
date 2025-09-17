@@ -2,28 +2,26 @@ import React from "react";
 import Image from "next/image";
 import { Cloud } from "@/shared/icons";
 import { Container } from "@/shared/components";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("HomePage");
   return (
     <section className="bg-gradient-to-r from-[#e9f3fa] to-[#fbfbfb] relative pt-[60px]">
-      <Container classname="flex flex-col lg:flex-row">
-        <div>
-          <span>Medical Center</span>
-          <p>Best Medical And Health Care Center</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-          </p>
-          <button>Contact Us</button>
+      <Container classname="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-1 flex-col gap-5">
+          <span className="text-[#12b48b] text-2xl lg:text-4xl">{t("about-us")}</span>
+          <p>{t("about-us-first")}</p>
+          <p>{t("about-us-second")}</p>
+          <p>{t("abous-us-third")}</p>
         </div>
-        <div>
+        <div className="flex-1">
           <Image
             alt="DOCTOR_PAGE"
             src="/general/doctor.webp"
             width={515}
             height={515}
             className="animate-bgshape relative"
-
           />
         </div>
       </Container>

@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
       </Container>
 
-      <Cloud className="absolute bottom-[-40px]" />
+      <Cloud className="absolute bottom-[-20px]" />
     </section>
   );
 };

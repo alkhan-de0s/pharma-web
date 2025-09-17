@@ -41,8 +41,8 @@ const Header = () => {
                 className={styles.HeaderInnerLogo}
                 src="/logo/logo.png"
                 alt="logo"
-                width={150}
-                height={100}
+                width={192}
+                height={136}
               />
             </Link>
 

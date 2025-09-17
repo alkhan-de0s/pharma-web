@@ -6,7 +6,7 @@ interface ContainerProps extends PropsWithChildren {
  classname?:string
 }
 
-const Container: FC<ContainerProps> = ({ children, extendRight = false,classname }) => {
+const Container: FC<ContainerProps> = ({ children, extendRight = false,classname="" }) => {
  return (
    <div className={`container ${classname} ${extendRight ? 'container--extend-right' : ''}`}>
      {children}

@@ -1,16 +1,18 @@
 "use client";
 import { Container } from "@/shared/components";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Form = () => {
   const t = useTranslations("HomePage");
+
+ 
 
   return (
     <section className="relative  h-[700px] bg-[#204066] bg-[url(/general/bg-form.png)] bg-fixed bg-cover bg-no-repeat my-10 p-4">
       <Container classname="flex items-center h-full justify-center">
         <form
-          className="flex flex-col gap-[30px] bg-[#f1f1f1] p-[15px]   md:p-10 rounded-xl"
+          className="flex flex-col gap-[30px] bg-[#f1f1f1] p-[15px]   md:p-10 w-full lg:w-[500px]  rounded-xl"
           action="#"
         >
           <span className="text-[#12b48b] text-semibold text-2xl text-center">

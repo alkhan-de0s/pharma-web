@@ -13,9 +13,9 @@ const Hero = () => {
           <span className="text-[#12b48b] text-2xl lg:text-4xl">{t("about-us")}</span>
           <p>{t("about-us-first")}</p>
           <p>{t("about-us-second")}</p>
-          <p>{t("abous-us-third")}</p>
+          <p className="relative z-1">{t("abous-us-third")}</p>
         </div>
-        <div className="flex-1">
+        <div className="flex justify-end flex-1">
           <Image
             alt="DOCTOR_PAGE"
             src="/general/doctor.webp"

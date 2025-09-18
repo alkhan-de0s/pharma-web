@@ -11,8 +11,15 @@
     "about-us": "Biz haqimizda",
     "about-us-first": "Renessanspharma kompaniyasi Germaniya, Yevropa, Amerika va Turkiya kompaniyalari bilan hamkorlik qilib, ularning biologik faol qo‘shimchalari va dori vositalarini Ozarbayjonga import qilib, yuqori sifatli mahsulotlari bilan ajralib turadigan mahalliy kompaniyadir.",
     "about-us-second": "Asosiy faoliyatimiz – preparatlarni Ozarbayjonga import qilish, ularning marketingi va ulgurji savdosidan iborat. Kompaniyamiz 2015-yildan rasmiy faoliyatini boshlagan.",
-    "about-us-third": "Renessanspharma – faoliyatini bitta preparat bilan boshlagan va hozirda turli mineral va vitaminlar bilan Ozarbayjon bozorida o‘z munosib o‘rnini egallagan, bildirilgan ishonchni oqlashga intilayotgan va barqaror rivojlanishni o‘ziga asosiy maqsad qilib qo‘ygan kompaniyadir.",
-    "contact-us": "Bog‘lanish"
+    "abous-us-third": "Renessanspharma – faoliyatini bitta preparat bilan boshlagan va hozirda turli mineral va vitaminlar bilan Ozarbayjon bozorida o‘z munosib o‘rnini egallagan, bildirilgan ishonchni oqlashga intilayotgan va barqaror rivojlanishni o‘ziga asosiy maqsad qilib qo‘ygan kompaniyadir.",
+    "contact-us": "Bog‘lanish",
+    "form-title": "Yordamga muhtojmisiz?",
+    "form-description": "Quyidagi maydonlarni to'ldiring, biz siz bilan bog'lanamiz!",
+    "name": "Ism",
+    "address": "Manzil",
+    "email": "Elektron pochta",
+    "message": "Xabar",
+    "send": "Jo'natish"
   },
   "Header": {
     "home": "Bosh sahifa",

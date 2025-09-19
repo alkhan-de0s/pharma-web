@@ -5,7 +5,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import { Providers as ReactQueryProvider } from "@/providers/reactQuery-provider";
-import { Header } from "@/shared/layout";
+import { Footer, Header } from "@/shared/layout";
 import "@/shared/scss/index.scss";
 
 
@@ -45,7 +45,7 @@ export default async function RootLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
             {children}
-            {/* <Footer/> */}
+            <Footer/>
           </NextIntlClientProvider>
         </ReactQueryProvider>
       </body>

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styles from "./Marquee.module.scss";
-// import { type Partners as PartnerType } from "@/modules/Home/model";
-import { getImageUrl } from "@/shared/helper/getImageUrl";
+// import { getImageUrl } from "@/shared/helper/getImageUrl";
 interface IMarqueeProps {
-  data: any[];
+  data: { id: string; imagePath: string }[];
 }
 export default function Marquee({ data }: IMarqueeProps) {
   return (
@@ -13,11 +12,11 @@ export default function Marquee({ data }: IMarqueeProps) {
           <li key={`a-${item.id}`}>
             <Image
               key={item.id}
-              src={getImageUrl(item.imagePath)}
+              src={item.imagePath}
               priority={false}
               alt="partner"
-              width={200}
-              height={100}
+              width={300}
+              height={200}
             />
           </li>
         ))}
@@ -27,11 +26,11 @@ export default function Marquee({ data }: IMarqueeProps) {
           <li key={`a-${item.id}`}>
             <Image
               key={item.id}
-              src={getImageUrl(item.imagePath)}
+              src={item.imagePath}
               priority={false}
               alt="partner"
-              width={200}
-              height={100}
+              width={300}
+              height={200}
             />
           </li>
         ))}

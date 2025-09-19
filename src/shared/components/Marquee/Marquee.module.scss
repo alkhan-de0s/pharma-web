@@ -15,8 +15,19 @@
   gap: var(--gap);
   min-width: 100%;
   animation: scroll 10s linear infinite;
+  position: relative;
+  gap: utils.rem(50px);
+
+  li{
+    height: utils.rem(200px);
+    &:first-child{
+      margin-left: utils.rem(50px);
+    }
+  }
   img{
-    object-fit: contain;
+    object-fit: cover;
+    height: 100%;
+    width : 100%;
   }
 }
 

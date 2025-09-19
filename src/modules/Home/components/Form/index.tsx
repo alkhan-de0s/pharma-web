@@ -1,6 +1,7 @@
 "use client";
 import { Container } from "@/shared/components";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import React, { useEffect } from "react";
 
 const Form = () => {
@@ -9,10 +10,18 @@ const Form = () => {
  
 
   return (
-    <section className="relative  h-[700px] bg-[#204066] bg-[url(/general/bg-form.png)] bg-fixed bg-cover bg-no-repeat my-10 p-4">
-      <Container classname="flex items-center h-full justify-center">
+    <section className="relative h-full  bg-[#204066] bg-[url(/general/bg-form.png)] bg-fixed bg-cover bg-no-repeat my-10 p-4  xl:p-10">
+      <Container classname="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
+        <div className="w-full h-[200px] lg:h-full  relative">
+          <Image
+           fill
+            src='/general/bg-outer.png'
+            alt="bg-outer"
+            className="object-contain"
+          />
+        </div>
         <form
-          className="flex flex-col gap-[30px] bg-[#f1f1f1] p-[15px]   md:p-10 w-full lg:w-[500px]  rounded-xl"
+          className="flex flex-1 flex-col gap-[30px] bg-[#f1f1f1] p-[15px]   md:p-10 w-full lg:w-[500px]  rounded-xl"
           action="#"
         >
           <span className="text-[#12b48b] text-semibold text-2xl text-center">

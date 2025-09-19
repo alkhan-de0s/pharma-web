@@ -4,15 +4,17 @@ import Slider from "./components/Slider";
 import HeroUI from "./components/HeroSection";
 import Product from "./components/Product";
 import FormUI from "./components/Form";
+import Partners from "./components/Partners";
 const Home = () => {
   return (
-    <div>
+    <main>
       <Slider />
       <Cards />
       <HeroUI />
       <Product/>
       <FormUI/>
-    </div>
+      <Partners/>
+    </main>
   );
 };
 

@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { ArrowTop } from '@/shared/icons'
-import styles from './Footer.module.scss'
 const ScroolToTop = () => {
 
 
@@ -15,7 +14,7 @@ const ScroolToTop = () => {
     }
 
     return (
-        <div  onClick={handleToTop} className={styles.FooterContentScroll}>
+        <div  onClick={handleToTop}>
             <ArrowTop />
             <span>Scroll</span>
         </div>

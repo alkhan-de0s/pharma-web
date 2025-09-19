@@ -3,7 +3,7 @@ import Cards from "./components/Cards";
 import Slider from "./components/Slider";
 import HeroUI from "./components/HeroSection";
 import Product from "./components/Product";
-import FormUI from "./components/Form";
+import {Contact} from "@/shared/components";
 import Partners from "./components/Partners";
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Cards />
       <HeroUI />
       <Product/>
-      <FormUI/>
+      <Contact/>
       <Partners/>
     </main>
   );

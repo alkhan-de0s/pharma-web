@@ -88,7 +88,7 @@ const Header = () => {
                 </li>
                 <li
                   className={` ${
-                    pathname.includes("certificates") ? styles.active : ""
+                    pathname.includes("certificate") ? styles.active : ""
                   }`}
                 >
                   <Link href={Urls.CERTIFICATES}>
@@ -97,7 +97,7 @@ const Header = () => {
                 </li>
                 <li
                   className={` ${
-                    pathname.includes("contact-us") ? styles.active : ""
+                    pathname.includes("contact") ? styles.active : ""
                   }`}
                 >
                   <Link href={Urls.CONTACT}>

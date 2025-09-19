@@ -1,8 +1,8 @@
 "use client";
+import React from "react";
 import { Container } from "@/shared/components";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React, { useEffect } from "react";
 
 const Form = () => {
   const t = useTranslations("HomePage");

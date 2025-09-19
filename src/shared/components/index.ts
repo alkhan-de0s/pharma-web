@@ -10,3 +10,5 @@ export { default as DiamondLoader } from "./DiamondLoader";
 export { default as MarqueeList } from "./Marquee";
 export {default as ImageCarousel} from "./ImageCarousel";
 export {default as PartnerCard} from "./PartnerCard";
+export {default as Contact} from "./Form";
+export {default as CertificateCard} from './Certificates'

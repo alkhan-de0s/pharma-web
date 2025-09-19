@@ -75,6 +75,20 @@
     "message": "Mesaj",
     "send": "Göndər"
   },
+"Partners": {
+  "trusted-partners": "Ishonchli",
+  "amazing-partners": "Ajoyib",
+  "partner" : "hamkorlarimiz",
+  "partners-text": "Biz innovatsiya va mukammallikni o'z ichiga olgan bu ajoyib kompaniyalar bilan ishlashdan faxrlanamiz."
+}
+,
+"Certificate": {
+  "ISO": "Sifatni boshqarish tizimi sertifikati",
+  "HACCP": "Xavf tahlili va tanqis nazorat nuqtalari sertifikati",
+  "HALAL": "Halol oziq-ovqat ishlab chiqarish sertifikati",
+  "GMP": "Yaxshi ishlab chiqarish amaliyoti sertifikati",
+  "FDA": "FDA - mahsulotlar xavfsizligini ta'minlab, jamoat sog'lig'ini himoya qiladigan va targ'ib qiladigan federal agentlikdir"
+},
 
   "NotFound": {
     "title": "Səhifə Tapılmadı",

@@ -5,5 +5,5 @@ export const enum Urls {
   GALLERY= "/gallery",
   OUR_PARTNERS = "partners",
   CERTIFICATES = "/certificate",
-  CONTACT = "/contact",
+  CONTACT = "/contact-us",
 }

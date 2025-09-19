@@ -2,7 +2,6 @@
   overflow: hidden;
 }
 .mainTitle {
-  font-family: Nunito Sans;
   font-weight: 900;
   font-size: utils.fluid-size(40,72);
   line-height: utils.fluid-size(44,90);
@@ -31,7 +30,6 @@
   @include utils.display-flex-between;
   transition: background-color 0.2s ease;
   text-align: left;
-  font-family: Archivo;
   font-weight: 600;
   font-size: utils.fluid-size(18,24);
   color: var(--main-color,variables.$main-black) ;

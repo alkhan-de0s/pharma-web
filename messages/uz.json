@@ -59,41 +59,7 @@
     "our-mission": "Missiyamız",
     "our-vission": "Vizyonumuz"
   },
-  "Catering": {
-    "catering-information": "Catering məlumatı",
-    "space-details": "Məkan haqqında məlumat"
-  },
-  "Halls": {
-    "size": "Ölçü",
-    "capacity": "Tutum",
-    "recommended-event": "Tövsiyə olunan tədbir növləri",
-    "bonus-areas": "Əlavə Sahələr"
-  },
-  "Events": {
-    "date": "Tarix",
-    "hall": "Zal",
-    "number-of-participants": "İştirakçı sayı",
-    "partner": "Tərəfdaş",
-    "additional-info": "Əlavə Məlumat",
-    "rules": "Qaydalar",
-    "ticket-info": "Bilet Məlumatı",
-    "no-events": "Bu kateqoriyada tədbir tapılmadı."
-  },
-  "Plan-Visit": {
-    "plan-your-visit": "Ziyarətinizi Planlaşdırın",
-    "nearby-hotels": "Yaxınlıqdakı Otellər",
-    "nearby-restourants": "Yaxınlıqdakı Restoranlar",
-    "experience-baku": "Bakını kəşf et",
-    "getting-here": "Bura Necə Gəlmək Olar",
-    "km": "km",
-    "distance-to-crystall": "Crystal Hall-a məsafə",
-    "star": "Ulduz",
-    "contact": "Əlaqə",
-    "address": "Ünvan",
-    "website": "Veb sayt",
-    "open-hours": "İş saatları",
-    "how-to-get-crystall": "Crystal Hall-a necə getmək olar"
-  },
+  
   "Contact": {
     "contact": "Əlaqə",
     "get-in-touch": "BİZİMLƏ ƏLAQƏ SAXLAYIN",
@@ -109,9 +75,7 @@
     "message": "Mesaj",
     "send": "Göndər"
   },
-  "Visual-tour": {
-    "tour": "360° Tur"
-  },
+
   "NotFound": {
     "title": "Səhifə Tapılmadı",
     "description": "Hər yeri axtardıq, amma axtardığınız səhifə bizdən qaçmış kimi görünür. Aşağıdakı düymə ilə əsas səhifəyə qayıda bilərsiniz.",

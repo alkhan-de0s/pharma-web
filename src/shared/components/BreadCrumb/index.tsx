@@ -1,22 +1,20 @@
 "use client";
 
-import React from "react";
 import { Link, usePathname } from "@/i18n/navigation";
-import { BreadcrumbProps } from "./model";
-import styles from "./Breadcrumb.module.scss";
-import Container from "../Container";
 import { ArrowBreadCrumb } from "@/shared/icons";
-import { useTranslations } from "next-intl";
+import React from "react";
+import Container from "../Container";
+import styles from "./Breadcrumb.module.scss";
+import { BreadcrumbProps } from "./model";
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className }) => {
 
-  const t = useTranslations("Our-Partners")
 
   const pathname = usePathname();
 
   return (
     <nav
-      className={`${styles.breadcrumb} ${className || ""}`}
+      className={`${styles.breadcrumb} ${className || ""} bg-white border-t border-gray-200`}
       aria-label="Breadcrumb"
     >
       <Container>
@@ -29,7 +27,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className }) => {
               <li key={item.href} className={styles.breadcrumbItem}>
                 {!isLast && !isActive ? (
                   <Link href={item.href} className={styles.breadcrumbLink}>
-                    {t(item.label)}
+                    {item.label}
                   </Link>
                 ) : (
                   <span
@@ -37,7 +35,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className }) => {
                       isActive ? styles.active : ""
                     }`}
                   >
-                    {t(item.label)}
+                    {item.label}
                   </span>
                 )}
 

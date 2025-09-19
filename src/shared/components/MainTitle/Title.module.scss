@@ -28,7 +28,6 @@
 }
 
 .title {
-  font-family: Nunito Sans;
   font-weight: 900;
   font-size: utils.fluid-size(40,72);
   line-height: utils.fluid-size(44,80);
@@ -45,7 +44,6 @@
   justify-content: flex-end;
 
   p {
-    font-family: Archivo;
     color: variables.$main-black-second;
     font-weight: 500;
     font-size: utils.rem(18px);

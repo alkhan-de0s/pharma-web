@@ -15,28 +15,23 @@ const config : NextConfig = {
       @use 'src/shared/scss/abstracts/utils' as utils;
     `,
   },
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: "https",
-  //       hostname: "images.unsplash.com",
-  //       port: "",
-  //       pathname: "/**",
-  //     },
-  //     {
-  //       protocol: "https",
-  //       hostname: "swiperjs.com/demos",
-  //       port: "",
-  //       pathname: "/**",
-  //     },
-  //     {
-  //       protocol: "http",
-  //       hostname: "135.181.42.5",
-  //       port: "330",
-  //       pathname: "/**",
-  //     },
-  //   ],
-  // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "swiperjs.com/demos",
+        port: "",
+        pathname: "/**",
+      },
+     
+    ],
+  },
 };
 
 

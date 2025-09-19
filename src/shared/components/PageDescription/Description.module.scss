@@ -15,7 +15,6 @@
       z-index: 2;
       bottom: -50%;
       color: variables.$main-white;
-      font-family: Nunito Sans;
       p {
         font-weight: 800;
         font-size: utils.fluid-size(40,72);
@@ -27,7 +26,6 @@
         font-weight: 500;
         font-size: utils.fluid-size(20,32);
         line-height: utils.fluid-size(24,40);
-        font-family: Nunito Sans;
       }
     }
     &::after {

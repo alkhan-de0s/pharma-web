@@ -61,41 +61,7 @@
     "our-mission": "Наша миссия",
     "our-vission": "Наше видение"
   },
-  "Catering": {
-    "catering-information": "Информация о кейтеринге",
-    "space-details": "Информация о пространстве"
-  },
-  "Halls": {
-    "size": "Размер",
-    "capacity": "Вместимость",
-    "recommended-event": "Рекомендуемые форматы мероприятий",
-    "bonus-areas": "Дополнительные зоны"
-  },
-  "Events": {
-    "date": "Дата",
-    "hall": "Зал",
-    "number-of-participants": "Количество участников",
-    "partner": "Партнёр",
-    "additional-info": "Дополнительная информация",
-    "rules": "Правила",
-    "ticket-info": "Информация о билетах",
-    "no-events": "В этой категории мероприятий не найдено."
-  },
-  "Plan-Visit": {
-    "plan-your-visit": "Планируйте визит",
-    "nearby-hotels": "Отели поблизости",
-    "nearby-restourants": "Рестораны поблизости",
-    "experience-baku": "Открой для себя Баку",
-    "getting-here": "Как добраться",
-    "km": "км",
-    "distance-to-crystall": "Расстояние до Crystal Hall",
-    "star": "Звезда",
-    "contact": "Контакт",
-    "address": "Адрес",
-    "website": "Веб-сайт",
-    "open-hours": "Часы работы",
-    "how-to-get-crystall": "Как добраться до Crystal Hall"
-  },
+
   "Contact": {
     "contact": "Контакты",
     "get-in-touch": "СВЯЖИТЕСЬ С НАМИ",
@@ -111,9 +77,7 @@
     "message": "Сообщение",
     "send": "Отправить"
   },
-  "Visual-tour": {
-    "tour": "Поворот на 360°"
-  },
+
   "NotFound": {
     "title": "Страница не найдена",
     "description": "Мы всё обыскали, но страница, которую вы ищете, похоже, ускользнула от нас. Нажмите кнопку ниже, чтобы вернуться на главную.",

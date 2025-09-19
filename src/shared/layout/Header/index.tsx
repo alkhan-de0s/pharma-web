@@ -2,7 +2,6 @@
 import { Link } from "@/i18n/navigation";
 import { Container, LanguageSwitcher } from "@/shared/components";
 import { Urls } from "@/shared/constants/urls";
-import { isUrlMatched } from "@/shared/helper/urlChecker";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -10,11 +9,10 @@ import { useState } from "react";
 import styles from "./Header.module.scss";
 const Header = () => {
   const t = useTranslations("Header");
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const pathname = usePathname() ?? "";
-  const headerStyle = isUrlMatched(pathname) ? "dark" : "default";
 
 
 
@@ -26,13 +24,10 @@ const Header = () => {
     setIsBurgerOpen(false);
   };
 
-  const toggleMobileDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
 
   return (
     <>
-      <header className={`${styles.Header} ${styles[headerStyle]}`}>
+      <header className={`${styles.Header}`}>
         <Container>
           <div className={styles.HeaderInner}>
             <Link href={Urls.HOME}>
@@ -48,19 +43,18 @@ const Header = () => {
 
             <nav className={styles.DesktopNav}>
               <ul className={styles.List}>
-                <li
-                  className={` ${pathname.includes("/") ? styles.active : ""}`}
-                >
-                  <Link href={Urls.CONTACT}>
+                 <li className={`${(pathname === "/" || pathname.split('/')[1] === "ru" || pathname.split('/')[1] === "uz") && pathname.split('/')[2] === undefined ? styles.active : ""}`}>
+                
+                  <Link href={Urls.HOME}>
                     <span>{t("home")}</span>
                   </Link>
                 </li>
                 <li
                   className={`${
-                    pathname.includes("about-us") ? styles.active : ""
+                    pathname.includes("about") ? styles.active : ""
                   }`}
                 >
-                  <Link href={Urls.HALLS}>{t("about-us")}</Link>
+                  <Link href={Urls.ABOUT}>{t("about-us")}</Link>
                 </li>
 
                 <li
@@ -68,7 +62,7 @@ const Header = () => {
                     pathname.includes("products") ? styles.active : ""
                   }`}
                 >
-                  <Link href={Urls.YOUR_VISIT}>
+                  <Link href={Urls.PRODUCTS}>
                     <span>{t("products")}</span>
                   </Link>
                 </li>
@@ -78,7 +72,7 @@ const Header = () => {
                     pathname.includes("gallery") ? styles.active : ""
                   }`}
                 >
-                  <Link href={Urls.FAQ}>
+                  <Link href={Urls.GALLERY}>
                     <span>{t("gallery")}</span>
                   </Link>
                 </li>
@@ -88,7 +82,7 @@ const Header = () => {
                     pathname.includes("partners") ? styles.active : ""
                   }`}
                 >
-                  <Link href={Urls.CONTACT}>
+                  <Link href={Urls.OUR_PARTNERS}>
                     <span>{t("partners")}</span>
                   </Link>
                 </li>
@@ -97,7 +91,7 @@ const Header = () => {
                     pathname.includes("certificates") ? styles.active : ""
                   }`}
                 >
-                  <Link href={Urls.CONTACT}>
+                  <Link href={Urls.CERTIFICATES}>
                     <span>{t("certificates")}</span>
                   </Link>
                 </li>
@@ -113,12 +107,12 @@ const Header = () => {
               </ul>
 
               <div className={styles.Divider}></div>
-              <LanguageSwitcher variant={headerStyle} />
+              <LanguageSwitcher variant="default" />
             </nav>
 
             <button
             name="burger_button"
-              className={`${styles.BurgerButton} ${styles[headerStyle]}`}
+              className={styles.BurgerButton}
               onClick={toggleBurger}
               aria-label="Menu_open"
             >
@@ -131,7 +125,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`${styles.MobileMenu} ${styles[headerStyle]} ${
+        className={`${styles.MobileMenu} ${
           isBurgerOpen ? styles.MobileMenuOpen : ""
         }`}
       >
@@ -164,31 +158,31 @@ const Header = () => {
           </div>
 
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.HALLS} onClick={closeBurger}>
+            <Link href={Urls.ABOUT} onClick={closeBurger}>
               <span>{t("about-us")}</span>
             </Link>
           </div>
 
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.YOUR_VISIT} onClick={closeBurger}>
+            <Link href={Urls.PRODUCTS} onClick={closeBurger}>
               <span>{t("products")}</span>
             </Link>
           </div>
 
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.FAQ} onClick={closeBurger}>
+            <Link href={Urls.GALLERY} onClick={closeBurger}>
               <span>{t("gallery")}</span>
             </Link>
           </div>
 
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.CONTACT} onClick={closeBurger}>
+            <Link href={Urls.OUR_PARTNERS} onClick={closeBurger}>
               <span>{t("partners")}</span>
             </Link>
           </div>
 
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.CONTACT} onClick={closeBurger}>
+            <Link href={Urls.CERTIFICATES} onClick={closeBurger}>
               <span>{t("certificates")}</span>
             </Link>
           </div>

@@ -1,23 +1,22 @@
-import React from 'react'
-import Product from '../Home/components/Product'
-import { useTranslations } from 'next-intl';
-import { BreadCrumb } from '@/shared/components';
-import { Urls } from '@/shared/constants/urls';
+import { BreadCrumb } from "@/shared/components";
+import { Urls } from "@/shared/constants/urls";
+import Product from "../Home/components/Product";
+import { getTranslations } from "next-intl/server";
 
-const Products = () => {
-     const t = useTranslations("Header");
+const Products = async () => {
 
+const t = await getTranslations("Header")
   return (
     <section>
-        <BreadCrumb
+      <BreadCrumb
         items={[
           { label: t("home"), href: Urls.HOME },
           { label: t("products"), href: Urls.PRODUCTS },
         ]}
       />
-        <Product/>
+      <Product  />
     </section>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

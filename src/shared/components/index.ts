@@ -12,3 +12,4 @@ export {default as ImageCarousel} from "./ImageCarousel";
 export {default as PartnerCard} from "./PartnerCard";
 export {default as Contact} from "./Form";
 export {default as CertificateCard} from './Certificates'
+export {default as ThumbnailSwiper} from './ProductThumbnail'

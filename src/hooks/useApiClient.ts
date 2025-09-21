@@ -7,9 +7,8 @@ import { fetchWithTimeout, FetchOptions } from '@/lib/clientFetchWithTimeout';
 
 
 const lang = {
-  "az" : 1,
-  "ru" : 2,
-  "en" : 3
+  "ru" : 1,
+  "uz" : 2,
 }
 
 export function useApiClient() {
@@ -31,7 +30,7 @@ export function useApiClient() {
       retries: 1,
       headers: {
         'Content-Type': 'application/json',
-        'languageId': String(lang[locale as keyof typeof lang] ?? lang["az"]),
+        'accept-language': String(lang[locale as keyof typeof lang] ?? lang["ru"]),
         ...options.headers,
       },
       ...options,

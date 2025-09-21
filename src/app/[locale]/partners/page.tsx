@@ -1,6 +1,8 @@
 import React from "react";
 import PartnersPage from "@/modules/Partners";
-const Partners = () => {
+
+const Partners = async() => {
+
   return <PartnersPage />;
 };
 

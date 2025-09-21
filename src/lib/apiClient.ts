@@ -4,20 +4,20 @@ import { fetchWithTimeout,FetchOptions } from './serverFetchWithTimeout';
 
 
 
-const lang = {
-  "az"  : 1,
-  "en" : 3,
-  "ru" : 2
+export const lang = {
+  "ru"  : 1,
+  "uz" : 2,
+
 }
 
-async function getServerLocale(): Promise<string> {
+export async function getServerLocale(): Promise<string> {
   const headersList = await headers();
   const cookieStore = await cookies();
   
   const localeFromHeader = headersList.get('x-locale');
   const localeFromCookie = cookieStore.get('NEXT_LOCALE')?.value;
   
-  return localeFromHeader || localeFromCookie || 'en';
+  return localeFromHeader || localeFromCookie || 'ru';
 }
 
 
@@ -34,7 +34,7 @@ export const serverApiClient = async <T>(
     retries: 2,
     headers: {
       'Content-Type': 'application/json',
-      "languageId" : String(lang[locale as keyof typeof lang] ?? lang["az"]  ),
+      "accept-language" : String(lang[locale as keyof typeof lang] ?? lang["ru"]  ),
       ...options.headers,
     },
     ...options,

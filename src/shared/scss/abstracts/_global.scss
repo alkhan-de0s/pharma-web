@@ -2,7 +2,8 @@
 @use "variables";
 @use "animations";
 
-html,body {
+html,
+body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -30,7 +31,6 @@ button {
   cursor: pointer;
 }
 
-
 .home-slider {
   .swiper-slide {
     img {
@@ -54,8 +54,8 @@ button {
       opacity: 0.8;
     }
   }
-  .swiper-slide-active{
-    img{
+  .swiper-slide-active {
+    img {
       animation: kbrns_zoomOutIn 35s linear 0s infinite alternate;
     }
   }
@@ -96,15 +96,34 @@ button {
     background-color: #039803 !important;
   }
 
-  .my-custom-button-disabled{
+  .my-custom-button-disabled {
     opacity: 0.5;
     cursor: unset;
   }
 }
 
+.thumbnail {
+  height: utils.rem(400px);
+  width: 100%;
+  .swiper-slide{
+  width: 100% !important;
+}}
 
-
-
+.thumbnail-swiper-thumbs{
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  .swiper-slide {
+    width: 25%;
+    height: utils.rem(200px) !important;
+    opacity: 0.4;
+    
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+    height: 200px !important;
+  }
+}
 
 .sr-only {
   position: absolute;
@@ -117,4 +136,3 @@ button {
   white-space: nowrap;
   border: 0;
 }
-

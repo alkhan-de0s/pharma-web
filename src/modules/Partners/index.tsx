@@ -1,12 +1,17 @@
+import { serverApi } from "@/lib/apiClient";
 import { BreadCrumb, PartnerCard } from "@/shared/components";
-import { partnersData } from "@/shared/components/PartnerCard/data";
 import { Urls } from "@/shared/constants/urls";
 import { Award } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Blog } from "./mode";
+import { getTranslations } from "next-intl/server";
 
-const Partners = () => {
-  const t = useTranslations("Header");
-  const partnersText = useTranslations("Partners")
+const Partners = async() => {
+  const t = await getTranslations("Header");
+  const partnersText = await getTranslations("Partners")
+
+
+    const data = await serverApi.get<Blog[]>("/blogs")
+
   return (
     <main>
       <BreadCrumb
@@ -37,7 +42,7 @@ const Partners = () => {
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partnersData.map((partner) => (
+            {data?.map((partner) => (
               <PartnerCard key={partner.id} partner={partner} />
             ))}
           </div>

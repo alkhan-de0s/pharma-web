@@ -89,6 +89,12 @@
   "GMP": "Yaxshi ishlab chiqarish amaliyoti sertifikati",
   "FDA": "FDA - mahsulotlar xavfsizligini ta'minlab, jamoat sog'lig'ini himoya qiladigan va targ'ib qiladigan federal agentlikdir"
 },
+"Product": {
+    "best-seller" : "Eng ko'p sotilgan",
+    "best-seller-text" : "Bu eng ko'p sotilgan mahsulotlardan biridir.",
+    "popular" : "Mashhur",
+    "popular-text" : "Ushbu mahsulotning mashhurligi, butun dunyo bo'ylab yuqori talab bilan tasdiqlanadi."
+},
 
   "NotFound": {
     "title": "Səhifə Tapılmadı",

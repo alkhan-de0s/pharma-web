@@ -23,6 +23,12 @@ const config : NextConfig = {
         port: "",
         pathname: "/**",
       },
+       {
+        protocol: "https",
+        hostname: "vbyrgbldfjkvpowixiuf.supabase.co",
+        port: "",
+        pathname: "/**",
+      },
       {
         protocol: "https",
         hostname: "swiperjs.com/demos",

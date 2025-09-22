@@ -1,19 +1,16 @@
 import { Link } from "@/i18n/navigation";
-import { getServerLocale, lang, serverApi } from "@/lib/apiClient";
 import { ProductDto } from "@/modules/Products/model";
 import { Container } from "@/shared/components";
 import { Urls } from "@/shared/constants/urls";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
-
-const Product: React.FC = async () => {
-  const locale = await getServerLocale();
+interface ProductPage {
+  data?: ProductDto[];
+}
+const Product: React.FC<ProductPage> = async ({ data }) => {
   const t = await getTranslations("Header");
 
-  const data = await serverApi.get<ProductDto[]>(
-    `products?languageId=${lang[locale as keyof typeof lang] ?? 1}`
-  );
   return (
     <section className="py-[30px] mt-5">
       <Container>
@@ -45,6 +42,7 @@ const Product: React.FC = async () => {
             </div>
           ))}
         </div>
+        
       </Container>
     </section>
   );

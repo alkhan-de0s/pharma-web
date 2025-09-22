@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 
 export class FetchTimeoutError extends Error {
   constructor(timeout: number) {
@@ -85,6 +86,7 @@ export async function fetchWithTimeout<T = any>(
       
       if (error instanceof Error && error.name === 'AbortError') {
         lastError = new FetchTimeoutError(timeout);
+        notFound(); 
       } else if (error instanceof FetchHttpError) {
         
         if (error.status >= 500 && attempt < retries) {

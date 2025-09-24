@@ -3,7 +3,7 @@ export const enum Urls {
   ABOUT = '/about',
   PRODUCTS = "/products",
   GALLERY= "/gallery",
-  OUR_PARTNERS = "partners",
+  OUR_PARTNERS = "/partners",
   CERTIFICATES = "/certificate",
   CONTACT = "/contact-us",
 }

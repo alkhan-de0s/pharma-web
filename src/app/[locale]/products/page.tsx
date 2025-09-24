@@ -5,7 +5,7 @@ import React from "react";
 
 const Index = async (props: {
   searchParams?: Promise<{
-    name?: string;
+    search?: string;
   }>;
 }) => {
   const searchParams = await props.searchParams;
@@ -14,7 +14,7 @@ const Index = async (props: {
 
   const data = await serverApi.get<ProductDto[]>(
     `products?languageId=${lang[locale as keyof typeof lang] ?? 1}&search=${
-      searchParams?.name ?? ""
+      searchParams?.search ?? ""
     }`
   );
 

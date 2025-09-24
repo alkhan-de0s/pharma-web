@@ -23,7 +23,16 @@
     "heartcare": "Yurak parvarishi",
     "more-need": "Kerakli ko'plab usullar.",
     "protect-anywhere": "Sog'lig'ingizni har doim va har joyda himoya qiling.",
-    "with-support": "Zamonaviy texnologiyalar va mutaxassislar  olishingiz mumkin."
+    "with-support": "Zamonaviy texnologiyalar va mutaxassislar  olishingiz mumkin.",
+    "interesting-fact": "Qiziqarli faktlar",
+    "interesting-fact-text-first": "Ginekologiya faqat kasalliklarni emas, balki ayollar reproduktiv salomatligini ham o‘rganadi; qiziq tomoni shundaki, ayol organizmi dunyodagi eng kuchli og‘riqlardan biri — tug‘ruq og‘rig‘iga chidash qobiliyatiga ega.",
+    "interesting-fact-text-second": "ndokrinologiya inson tanasidagi ichki sekretsiya bezlari va gormonlarni o‘rganuvchi fan hisoblanadi. Qizig‘i shundaki, organizmdagi atigi bir choy qoshiq gormon butun tana a’zolarining ishini boshqara oladi.",
+    "interesting-fact-text-third": "Pediatriya bolalarning sog‘lig‘i, o‘sishi va rivojlanishini o‘rganadigan tibbiyot sohasi hisoblanadi. Qiziqarli jihati shundaki, yangi tug‘ilgan chaqaloqlarda taxminan 270 ta suyak bo‘ladi, kattalardagidan ko‘p, chunki ba’zi suyaklar o‘sish jarayonida birlashadi. Shuningdek, bolalarning immun tizimi kattalarnikidan farq qiladi, shuning uchun ular infeksiyalarga ko‘proq moyil bo‘lishi mumkin, shuning uchun pediatrlar ularning emlashlariga alohida e’tibor berishadi.",
+    "view-all-products": "Barcha mahsulotlarni ko'rish",
+    "customer": "Mijozlar",
+    "medicine": "Dori-darmonlar",
+    "years-of-experience": "10 yillik tajriba",
+    "active-trusted": "Faol va ishonchli"
   },
   "Header": {
     "home": "Bosh sahifa",

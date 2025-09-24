@@ -152,7 +152,7 @@ const Header = () => {
 
         <nav className={styles.MobileNav}>
           <div className={styles.MobileNavItem}>
-            <Link href={Urls.CONTACT} onClick={closeBurger}>
+            <Link href={Urls.HOME} onClick={closeBurger}>
               <span>{t("home")}</span>
             </Link>
           </div>

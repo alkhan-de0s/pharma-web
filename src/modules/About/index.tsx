@@ -14,9 +14,11 @@ const About = () => {
           { label: t("about-us"), href: Urls.ABOUT },
         ]}
       />
-      <Hero />
+      <Hero heroDescFirstTitle="about-us-first" heroDescSecondTitle="about-us-second" heroDescThirdTitle="abous-us-third" heroTitle="about-us" imagePath="/general/doctor.webp" key='ABOUT'  />
     </>
   );
 };
 
 export default About;
+
+
